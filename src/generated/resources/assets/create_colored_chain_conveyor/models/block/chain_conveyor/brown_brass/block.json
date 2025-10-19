@@ -1,0 +1,7 @@
+{
+  "parent": "create:block/chain_conveyor/block",
+  "textures": {
+    "0": "create_colored_chain_conveyor:block/conveyor_casings/brown_brass",
+    "particle": "create_extra_casing:block/brown_brass_casing"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "create_colored_chain_conveyor:block/chain_conveyor/orange_copper/block"
+    }
+  }
+}

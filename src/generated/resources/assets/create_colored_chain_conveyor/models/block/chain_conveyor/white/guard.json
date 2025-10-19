@@ -1,0 +1,9 @@
+{
+  "parent": "create:block/chain_conveyor/guard",
+  "textures": {
+    "bullwheel": "create_colored_chain_conveyor:block/bullwheels/white",
+    "conveyor_casing": "create_colored_chain_conveyor:block/conveyor_casings/white",
+    "conveyor_port": "create_colored_chain_conveyor:block/conveyor_ports/white",
+    "particle": "create_extra_casing:block/white_casing"
+  }
+}

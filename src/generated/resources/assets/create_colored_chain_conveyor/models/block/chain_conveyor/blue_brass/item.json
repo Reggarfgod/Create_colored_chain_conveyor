@@ -1,0 +1,9 @@
+{
+  "parent": "create:block/chain_conveyor/item",
+  "textures": {
+    "bullwheel": "create_colored_chain_conveyor:block/bullwheels/blue_brass",
+    "conveyor_casing": "create_colored_chain_conveyor:block/conveyor_casings/blue_brass",
+    "conveyor_port": "create_colored_chain_conveyor:block/conveyor_ports/blue_brass",
+    "particle": "create_extra_casing:block/blue_brass_casing"
+  }
+}

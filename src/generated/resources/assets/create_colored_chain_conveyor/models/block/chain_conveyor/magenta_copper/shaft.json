@@ -1,0 +1,9 @@
+{
+  "parent": "create:block/chain_conveyor/shaft",
+  "textures": {
+    "bullwheel": "create_colored_chain_conveyor:block/bullwheels/magenta_copper",
+    "conveyor_casing": "create_colored_chain_conveyor:block/conveyor_casings/magenta_copper",
+    "conveyor_port": "create_colored_chain_conveyor:block/conveyor_ports/magenta_copper",
+    "particle": "create_extra_casing:block/magenta_copper_casing"
+  }
+}

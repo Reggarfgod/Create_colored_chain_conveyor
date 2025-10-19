@@ -1,0 +1,9 @@
+{
+  "parent": "create:block/chain_conveyor/shaft",
+  "textures": {
+    "bullwheel": "create_colored_chain_conveyor:block/bullwheels/orange",
+    "conveyor_casing": "create_colored_chain_conveyor:block/conveyor_casings/orange",
+    "conveyor_port": "create_colored_chain_conveyor:block/conveyor_ports/orange",
+    "particle": "create_extra_casing:block/orange_casing"
+  }
+}

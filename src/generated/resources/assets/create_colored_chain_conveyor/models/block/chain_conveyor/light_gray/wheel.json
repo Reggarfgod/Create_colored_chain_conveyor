@@ -1,0 +1,9 @@
+{
+  "parent": "create:block/chain_conveyor/wheel",
+  "textures": {
+    "bullwheel": "create_colored_chain_conveyor:block/bullwheels/light_gray",
+    "conveyor_casing": "create_colored_chain_conveyor:block/conveyor_casings/light_gray",
+    "conveyor_port": "create_colored_chain_conveyor:block/conveyor_ports/light_gray",
+    "particle": "create_extra_casing:block/light_gray_casing"
+  }
+}

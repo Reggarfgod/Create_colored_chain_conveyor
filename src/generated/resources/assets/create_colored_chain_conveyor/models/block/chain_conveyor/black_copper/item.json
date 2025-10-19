@@ -1,0 +1,9 @@
+{
+  "parent": "create:block/chain_conveyor/item",
+  "textures": {
+    "bullwheel": "create_colored_chain_conveyor:block/bullwheels/black_copper",
+    "conveyor_casing": "create_colored_chain_conveyor:block/conveyor_casings/black_copper",
+    "conveyor_port": "create_colored_chain_conveyor:block/conveyor_ports/black_copper",
+    "particle": "create_extra_casing:block/black_copper_casing"
+  }
+}
