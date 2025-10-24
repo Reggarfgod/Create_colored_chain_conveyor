@@ -1,4 +1,4 @@
-package com.reggarf.mods.create_colored_chain_conveyor.mixins.create;
+package com.reggarf.mods.create_colored_chain_conveyor.mixins;
 
 import com.reggarf.mods.create_colored_chain_conveyor.registries.CCCCBlocks;
 import com.simibubi.create.content.kinetics.chainConveyor.ChainConveyorConnectionHandler;
@@ -12,9 +12,11 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(value = ChainConveyorConnectionHandler.class,remap = false)
 public class ChainConveyorConnectionHandlerMixin {
 
-    @Redirect(method = "onItemUsedOnBlock" , at = @At(value = "INVOKE", target = "Lcom/tterrag/registrate/util/entry/BlockEntry;has(Lnet/minecraft/world/level/block/state/BlockState;)Z"))
-    private static boolean encased$newTypes(BlockEntry<?> instance, BlockState state){
-        return CCCCBlocks.isChainConveyor(state);
+    @Redirect(
+            method = "onItemUsedOnBlock" ,
+            at = @At(value = "INVOKE",
+                    target = "Lcom/tterrag/registrate/util/entry/BlockEntry;has(Lnet/minecraft/world/level/block/state/BlockState;)Z"))
+    private static boolean Customcolorencased$newTypes(BlockEntry<?> instance, BlockState state){
+        return CCCCBlocks.isColoredChainConveyor(state);
     }
-
 }

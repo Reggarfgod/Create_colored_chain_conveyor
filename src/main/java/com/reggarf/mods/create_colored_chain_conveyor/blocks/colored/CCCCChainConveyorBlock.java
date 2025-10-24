@@ -12,6 +12,6 @@ public class CCCCChainConveyorBlock extends ChainConveyorBlock {
 
     @Override
     public BlockEntityType<? extends ChainConveyorBlockEntity> getBlockEntityType() {
-        return CCCCBlockEntityTypes.CHAIN_CONVEYOR.get();
+        return CCCCBlockEntityTypes.COLORED_CHAIN_CONVEYOR.get();
     }
 }

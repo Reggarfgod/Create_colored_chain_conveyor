@@ -9,7 +9,7 @@ import static com.reggarf.mods.create_colored_chain_conveyor.CCCC.REGISTRATE;
 
 public class CCCCBlockEntityTypes {
 
-    public static final BlockEntityEntry<ChainConveyorBlockEntity> CHAIN_CONVEYOR = REGISTRATE
+    public static final BlockEntityEntry<ChainConveyorBlockEntity> COLORED_CHAIN_CONVEYOR = REGISTRATE
             .blockEntity("colored_chain_conveyor", ChainConveyorBlockEntity::new)
             .visual(() -> CCCCChainConveyorVisual::new)
             .validBlocks(

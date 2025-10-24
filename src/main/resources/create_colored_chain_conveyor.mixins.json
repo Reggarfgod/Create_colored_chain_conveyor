@@ -4,7 +4,7 @@
   "package": "com.reggarf.mods.create_colored_chain_conveyor.mixins",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "create.ChainConveyorConnectionHandlerMixin"
+    "ChainConveyorConnectionHandlerMixin"
   ],
   "client": [
   ],

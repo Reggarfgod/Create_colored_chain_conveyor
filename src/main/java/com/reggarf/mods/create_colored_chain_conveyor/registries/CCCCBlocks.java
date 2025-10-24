@@ -7,14 +7,13 @@ import com.reggarf.mods.create_extra_casing.CEC;
 import com.reggarf.mods.create_extra_casing.registry.CECBlocks;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.Create;
-import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.SharedProperties;
-import com.tterrag.registrate.builders.BlockBuilder;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -210,7 +209,7 @@ public class CCCCBlocks {
         // trigger class loading
     }
 
-    public static boolean isChainConveyor(BlockState state) {
+    public static boolean isColoredChainConveyor(BlockState state) {
         return AllBlocks.CHAIN_CONVEYOR.has(state)
                 || BRASS_CHAIN_CONVEYOR.has(state)
                 || COPPER_CHAIN_CONVEYOR.has(state)
@@ -271,5 +270,13 @@ public class CCCCBlocks {
                 || ORANGE_COPPER_CHAIN_CONVEYOR.has(state)
                 || CYAN_COPPER_CHAIN_CONVEYOR.has(state);
                 //|| RGB_COPPER_CHAIN_CONVEYOR.has(state);
+    }
+    public static Component getBlockName(BlockState state) {
+        // Check if it’s a colored conveyor
+        if (isColoredChainConveyor(state)) {
+            return Component.translatable("block.create_colored_chain_conveyor.colored_chain_conveyor");
+        }
+        // fallback
+        return state.getBlock().getName();
     }
 }
