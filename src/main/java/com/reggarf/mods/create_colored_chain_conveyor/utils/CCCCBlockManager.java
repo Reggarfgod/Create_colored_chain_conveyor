@@ -2,10 +2,6 @@ package com.reggarf.mods.create_colored_chain_conveyor.utils;
 
 import com.reggarf.mods.create_colored_chain_conveyor.CCCC;
 import com.reggarf.mods.create_colored_chain_conveyor.config.CCCCConfigs;
-import com.simibubi.create.content.kinetics.base.HorizontalKineticBlock;
-import com.simibubi.create.content.kinetics.base.RotatedPillarKineticBlock;
-
-import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -13,9 +9,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-
-import static com.simibubi.create.content.kinetics.base.HorizontalKineticBlock.HORIZONTAL_FACING;
-import static com.simibubi.create.content.kinetics.base.RotatedPillarKineticBlock.AXIS;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.GAME,modid = CCCC.MODID)
 public class CCCCBlockManager {
@@ -42,18 +35,4 @@ public class CCCCBlockManager {
         event.setCancellationResult(InteractionResult.SUCCESS);
         event.setCanceled(true);
     }
-
-    private static void changeHorizontalDirectionBlock(PlayerInteractEvent.RightClickBlock event,BlockState state,Level level,BlockState newBlock){
-        if (!(state.getBlock() instanceof HorizontalKineticBlock))return;
-        Direction facing = state.getValue(HORIZONTAL_FACING);
-        changeBlock(event,state,level,newBlock.setValue(HORIZONTAL_FACING,facing));
-    }
-
-    private static void changeAxisBlock(PlayerInteractEvent.RightClickBlock event,BlockState state,Level level,BlockState newBlock){
-        if (!(state.getBlock() instanceof RotatedPillarKineticBlock))return;
-        Direction.Axis axis = state.getValue(AXIS);
-        changeBlock(event,state,level,newBlock.setValue(AXIS,axis));
-    }
-
-
 }
