@@ -147,7 +147,7 @@ dependencies {
     runtimeOnly "curse.maven:sodium-394468:6382651"
 
     implementation "curse.maven:create-extra-casing-1192187:6944498"
-    //implementation "curse.maven:create-encased-829380:6767415"
+    implementation "curse.maven:create-encased-829380:6767415"
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }

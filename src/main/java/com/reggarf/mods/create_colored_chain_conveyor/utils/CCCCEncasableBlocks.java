@@ -5,9 +5,11 @@ import com.reggarf.mods.create_extra_casing.registry.CECBlocks;
 import com.simibubi.create.AllBlocks;
 import com.tterrag.registrate.util.entry.BlockEntry;
 
+import fr.iglee42.createcasing.registries.EncasedBlocks;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.fml.ModList;
 
 import java.util.Arrays;
 
@@ -17,6 +19,23 @@ public enum CCCCEncasableBlocks {
     ANDESITE(AllBlocks.ANDESITE_CASING, AllBlocks.CHAIN_CONVEYOR),
     BRASS(AllBlocks.BRASS_CASING, CCCCBlocks.BRASS_CHAIN_CONVEYOR),
     COPPER(AllBlocks.COPPER_CASING, CCCCBlocks.COPPER_CHAIN_CONVEYOR),
+
+    BRASS_1(ModList.get().isLoaded("createcasing") ? AllBlocks.BRASS_CASING : null,
+            ModList.get().isLoaded("createcasing") ? EncasedBlocks.BRASS_CHAIN_CONVEYOR : null),
+    COPPER_1(ModList.get().isLoaded("createcasing") ? AllBlocks.COPPER_CASING : null,
+            ModList.get().isLoaded("createcasing") ? EncasedBlocks.COPPER_CHAIN_CONVEYOR : null),
+    RAILWAY_1(ModList.get().isLoaded("createcasing") ? AllBlocks.RAILWAY_CASING : null,
+            ModList.get().isLoaded("createcasing") ? EncasedBlocks.RAILWAY_CHAIN_CONVEYOR : null),
+    INDUSTRIAL_IRON_1(ModList.get().isLoaded("createcasing") ? AllBlocks.INDUSTRIAL_IRON_BLOCK : null,
+            ModList.get().isLoaded("createcasing") ? EncasedBlocks.INDUSTRIAL_IRON_CHAIN_CONVEYOR : null),
+    WEATHERED_IRON_1(ModList.get().isLoaded("createcasing") ? AllBlocks.WEATHERED_IRON_BLOCK : null,
+            ModList.get().isLoaded("createcasing") ? EncasedBlocks.WEATHERED_IRON_CHAIN_CONVEYOR : null),
+    REFINED_RADIANCE_1(ModList.get().isLoaded("createcasing") ? AllBlocks.REFINED_RADIANCE_CASING : null,
+            ModList.get().isLoaded("createcasing") ? EncasedBlocks.REFINED_RADIANCE_CHAIN_CONVEYOR : null),
+    SHADOW_STEEL_1(ModList.get().isLoaded("createcasing") ? AllBlocks.SHADOW_STEEL_CASING : null,
+            ModList.get().isLoaded("createcasing") ? EncasedBlocks.SHADOW_STEEL_CHAIN_CONVEYOR : null),
+    CREATIVE_1(ModList.get().isLoaded("createcasing") ? EncasedBlocks.CREATIVE_CASING : null,
+            ModList.get().isLoaded("createcasing") ? EncasedBlocks.CREATIVE_CHAIN_CONVEYOR : null),
 
     // Andesite colored
     BLACK_ANDESITE(CECBlocks.BLACK_CASING, CCCCBlocks.BLACK_ANDESITE_CHAIN_CONVEYOR),

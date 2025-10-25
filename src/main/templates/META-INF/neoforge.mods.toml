@@ -23,7 +23,7 @@ displayName = "${mod_name}" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforge.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
-displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+displayURL="https://curseforge.com/minecraft/mc-mods/create-colored-chain-conveyor" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="create_colored_chain_conveyor.png" #optional
 # A text field displayed in the mod UI
@@ -95,5 +95,5 @@ side="BOTH"
 modId="createcasing"
 type="optional"
 versionRange="[1.7.2-fix1,5.0.1)"
-ordering="AFTER"
+ordering="BEFORE"
 side="BOTH"

@@ -3,6 +3,7 @@
   "minVersion": "0.8",
   "package": "com.reggarf.mods.create_colored_chain_conveyor.mixins",
   "compatibilityLevel": "JAVA_21",
+  "refmap": "create_colored_chain_conveyor.refmap.json",
   "mixins": [
     "ChainConveyorConnectionHandlerMixin"
   ],
