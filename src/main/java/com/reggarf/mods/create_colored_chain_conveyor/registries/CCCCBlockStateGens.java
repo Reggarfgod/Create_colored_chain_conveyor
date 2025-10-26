@@ -10,8 +10,9 @@ import com.tterrag.registrate.providers.RegistrateProvider;
 import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
 
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.client.model.generators.ModelBuilder;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.minecraftforge.client.model.generators.ModelBuilder;
+import net.minecraftforge.client.model.generators.ModelFile;
+
 
 import java.util.Objects;
 
@@ -39,7 +40,7 @@ public class CCCCBlockStateGens {
         }
     }
 
-    private static ModelBuilder<? extends ModelBuilder<?>> texturesChainConveyor(ModelBuilder<? extends ModelBuilder<?>> builder,String casing){
+    private static ModelBuilder<? extends ModelBuilder<?>> texturesChainConveyor(ModelBuilder<? extends ModelBuilder<?>> builder, String casing){
         return builder
                 .texture("conveyor_casing",getConveyorCasingTexture(casing))
                 .texture("conveyor_port", getConveyorPortTexture(casing))

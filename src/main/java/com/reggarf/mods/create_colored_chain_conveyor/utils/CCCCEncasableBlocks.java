@@ -1,15 +1,17 @@
 package com.reggarf.mods.create_colored_chain_conveyor.utils;
 
 import com.reggarf.mods.create_colored_chain_conveyor.registries.CCCCBlocks;
+
+
 import com.reggarf.mods.create_extra_casing.registry.CECBlocks;
 import com.simibubi.create.AllBlocks;
 import com.tterrag.registrate.util.entry.BlockEntry;
-
 import fr.iglee42.createcasing.registries.EncasedBlocks;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.fml.ModList;
+import net.minecraftforge.fml.ModList;
+
 
 import java.util.Arrays;
 

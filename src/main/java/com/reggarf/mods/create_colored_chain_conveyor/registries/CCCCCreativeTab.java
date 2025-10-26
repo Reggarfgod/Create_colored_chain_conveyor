@@ -7,22 +7,22 @@ import com.simibubi.create.AllCreativeModeTabs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
+
 
 public class CCCCCreativeTab {
 
     private static final DeferredRegister<CreativeModeTab> TAB_REGISTER =
-            net.neoforged.neoforge.registries.DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CCCC.MODID);
+           DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CCCC.MODID);
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN_TAB = TAB_REGISTER.register("tab",
-            () -> CreativeModeTab.builder()
+    public static final RegistryObject<CreativeModeTab> MAIN_TAB = TAB_REGISTER.register("create_extra_casing_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(CCCCBlocks.RED_ANDESITE_CHAIN_CONVEYOR.get()))
                     .title(Component.translatable("creativetab.create_colored_chain_conveyor_tab"))
                     .withTabsBefore(AllCreativeModeTabs.BASE_CREATIVE_TAB.getKey())
-                    .icon(CCCCBlocks.RED_ANDESITE_CHAIN_CONVEYOR::asStack)
                     .displayItems((pParameters, pOutput) -> {
-
                         // --- Base chain conveyors ---
                         pOutput.accept(CCCCBlocks.BRASS_CHAIN_CONVEYOR.get());
                         pOutput.accept(CCCCBlocks.COPPER_CHAIN_CONVEYOR.get());

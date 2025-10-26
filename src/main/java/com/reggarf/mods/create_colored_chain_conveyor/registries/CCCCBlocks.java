@@ -18,7 +18,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
-import net.neoforged.neoforge.registries.DeferredRegister;
+
 
 import static com.reggarf.mods.create_colored_chain_conveyor.CCCC.REGISTRATE;
 import static com.reggarf.mods.create_colored_chain_conveyor.registries.CCCCBlockStateGens.chainConveyor;
@@ -30,7 +30,7 @@ public class CCCCBlocks {
         REGISTRATE.setCreativeTab(CCCCCreativeTab.MAIN_TAB);
     }
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, CCCC.MODID);
+    //public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, CCCC.MODID);
 
     // --- Base Material Variants ---
     public static final BlockEntry<CCCCChainConveyorBlock> BRASS_CHAIN_CONVEYOR = createChainConveyor("brass");

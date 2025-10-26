@@ -5,7 +5,9 @@ import com.reggarf.mods.create_extra_casing.CEC;
 import com.reggarf.mods.create_extra_casing.registry.CECBlocks;
 import com.simibubi.create.AllBlocks;
 import com.tterrag.registrate.util.entry.RegistryEntry;
-import net.createmod.catnip.registry.RegisteredObjectsHelper;
+
+import net.createmod.catnip.platform.CatnipServices;
+import net.createmod.catnip.platform.services.RegisteredObjectsHelper;
 import net.createmod.ponder.api.registration.PonderTagRegistrationHelper;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
@@ -19,9 +21,9 @@ public class CCCCPonderTags {
     }
 
     public static void register(PonderTagRegistrationHelper<ResourceLocation> helper) {
-        PonderTagRegistrationHelper<RegistryEntry<?, ?>> HELPER = helper.withKeyFunction(RegistryEntry::getId);
+        PonderTagRegistrationHelper<RegistryEntry<?>> HELPER = helper.withKeyFunction(RegistryEntry::getId);
         PonderTagRegistrationHelper<ItemLike> itemHelper = helper.withKeyFunction(
-                RegisteredObjectsHelper::getKeyOrThrow);
+                CatnipServices.REGISTRIES::getKeyOrThrow);
 
 
         HELPER.addToTag(KINETIC_RELAYS)
