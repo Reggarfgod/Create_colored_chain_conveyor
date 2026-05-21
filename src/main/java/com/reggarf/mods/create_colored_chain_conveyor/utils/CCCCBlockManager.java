@@ -26,7 +26,9 @@ public class CCCCBlockManager {
             CCCCEncasableBlocks casingSet = CCCCEncasableBlocks.getBlockByCasing(event.getItemStack().getItem());
             if (casingSet.isInSet(state)) return;
             if (CCCCEncasableBlocks.isChainConveyor(state)) {
-                changeBlock(event, state, level, casingSet.getChainConveyor().getDefaultState());
+//                changeBlock(event, state, level, casingSet.getChainConveyor().getDefaultState());
+                changeBlock(event, state, level,
+                        casingSet.getChainConveyor().get().defaultBlockState());
             }
         }
 

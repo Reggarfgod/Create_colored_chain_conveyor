@@ -81,5 +81,5 @@ side="BOTH"
 modId="createcasing"
 mandatory=false
 versionRange="[1.7.2,5.0.1)"
-ordering="BEFORE"
+ordering="AFTER"
 side="BOTH"
