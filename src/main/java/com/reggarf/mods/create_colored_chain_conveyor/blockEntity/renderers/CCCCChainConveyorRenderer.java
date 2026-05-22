@@ -3,9 +3,10 @@ package com.reggarf.mods.create_colored_chain_conveyor.blockEntity.renderers;
 import java.util.List;
 import java.util.Map.Entry;
 
+import com.reggarf.mods.create_colored_chain_conveyor.registries.CCCCPartialModels;
 import com.simibubi.create.content.kinetics.chainConveyor.ChainConveyorBlockEntity;
 import com.simibubi.create.content.kinetics.chainConveyor.ChainConveyorPackage;
-import fr.iglee42.createcasing.registries.EncasedPartialModels;
+
 import org.joml.Matrix3f;
 import org.joml.Matrix4f;
 
@@ -61,7 +62,7 @@ public class CCCCChainConveyorRenderer extends KineticBlockEntityRenderer<ChainC
 		if (VisualizationManager.supportsVisualization(be.getLevel()))
 			return;
 
-		CachedBuffers.partial(EncasedPartialModels.getChainConveyorWheel(be.getBlockState()), be.getBlockState())
+		CachedBuffers.partial(CCCCPartialModels.getChainConveyorWheel(be.getBlockState()), be.getBlockState())
 			.light(light)
 			.overlay(overlay)
 			.renderInto(ms, buffer.getBuffer(RenderType.cutoutMipped()));
@@ -162,7 +163,7 @@ public class CCCCChainConveyorRenderer extends KineticBlockEntityRenderer<ChainC
 
 			if (!VisualizationManager.supportsVisualization(be.getLevel())) {
 				SuperByteBuffer guard =
-					CachedBuffers.partial(EncasedPartialModels.getChainConveyorGuard(be.getBlockState()), be.getBlockState());
+					CachedBuffers.partial(CCCCPartialModels.getChainConveyorGuard(be.getBlockState()), be.getBlockState());
 				guard.center();
 				guard.rotateYDegrees((float) yaw);
 
@@ -266,7 +267,7 @@ public class CCCCChainConveyorRenderer extends KineticBlockEntityRenderer<ChainC
 
 	@Override
 	protected SuperByteBuffer getRotatedModel(ChainConveyorBlockEntity be, BlockState state) {
-		return CachedBuffers.partial(EncasedPartialModels.getChainConveyorShaft(state), state);
+		return CachedBuffers.partial(CCCCPartialModels.getChainConveyorShaft(state), state);
 	}
 
 	@Override
