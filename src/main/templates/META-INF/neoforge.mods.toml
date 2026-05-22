@@ -81,7 +81,7 @@ side = "BOTH"
 modId="create"
 type="required"
 versionRange="[6.0.6,6.1.0)"
-ordering="AFTER"
+ordering="NONE"
 side="BOTH"
 
 [[dependencies."${mod_id}"]]
@@ -94,6 +94,6 @@ side="BOTH"
 [[dependencies."${mod_id}"]]
 modId="createcasing"
 type="optional"
-versionRange="[1.7.2-fix1,5.0.1)"
+versionRange="[1.8.1,5.0.1)"
 ordering="BEFORE"
 side="BOTH"

@@ -5,6 +5,7 @@ import com.reggarf.mods.create_extra_casing.registry.CECBlocks;
 import com.simibubi.create.AllBlocks;
 import com.tterrag.registrate.util.entry.BlockEntry;
 
+import fr.iglee42.createcasing.casings.CasingSets;
 import fr.iglee42.createcasing.registries.EncasedBlocks;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.fml.ModList;
 
 import java.util.Arrays;
+import java.util.function.Supplier;
 
 public enum CCCCEncasableBlocks {
 
@@ -20,22 +22,94 @@ public enum CCCCEncasableBlocks {
     BRASS(AllBlocks.BRASS_CASING, CCCCBlocks.BRASS_CHAIN_CONVEYOR),
     COPPER(AllBlocks.COPPER_CASING, CCCCBlocks.COPPER_CHAIN_CONVEYOR),
 
-    BRASS_1(ModList.get().isLoaded("createcasing") ? AllBlocks.BRASS_CASING : null,
-            ModList.get().isLoaded("createcasing") ? EncasedBlocks.BRASS_CHAIN_CONVEYOR : null),
-    COPPER_1(ModList.get().isLoaded("createcasing") ? AllBlocks.COPPER_CASING : null,
-            ModList.get().isLoaded("createcasing") ? EncasedBlocks.COPPER_CHAIN_CONVEYOR : null),
-    RAILWAY_1(ModList.get().isLoaded("createcasing") ? AllBlocks.RAILWAY_CASING : null,
-            ModList.get().isLoaded("createcasing") ? EncasedBlocks.RAILWAY_CHAIN_CONVEYOR : null),
-    INDUSTRIAL_IRON_1(ModList.get().isLoaded("createcasing") ? AllBlocks.INDUSTRIAL_IRON_BLOCK : null,
-            ModList.get().isLoaded("createcasing") ? EncasedBlocks.INDUSTRIAL_IRON_CHAIN_CONVEYOR : null),
-    WEATHERED_IRON_1(ModList.get().isLoaded("createcasing") ? AllBlocks.WEATHERED_IRON_BLOCK : null,
-            ModList.get().isLoaded("createcasing") ? EncasedBlocks.WEATHERED_IRON_CHAIN_CONVEYOR : null),
-    REFINED_RADIANCE_1(ModList.get().isLoaded("createcasing") ? AllBlocks.REFINED_RADIANCE_CASING : null,
-            ModList.get().isLoaded("createcasing") ? EncasedBlocks.REFINED_RADIANCE_CHAIN_CONVEYOR : null),
-    SHADOW_STEEL_1(ModList.get().isLoaded("createcasing") ? AllBlocks.SHADOW_STEEL_CASING : null,
-            ModList.get().isLoaded("createcasing") ? EncasedBlocks.SHADOW_STEEL_CHAIN_CONVEYOR : null),
-    CREATIVE_1(ModList.get().isLoaded("createcasing") ? EncasedBlocks.CREATIVE_CASING : null,
-            ModList.get().isLoaded("createcasing") ? EncasedBlocks.CREATIVE_CHAIN_CONVEYOR : null),
+//    BRASS_1(ModList.get().isLoaded("createcasing") ? AllBlocks.BRASS_CASING : null,
+//            ModList.get().isLoaded("createcasing") ? EncasedBlocks.BRASS_CHAIN_CONVEYOR : null),
+//    COPPER_1(ModList.get().isLoaded("createcasing") ? AllBlocks.COPPER_CASING : null,
+//            ModList.get().isLoaded("createcasing") ? EncasedBlocks.COPPER_CHAIN_CONVEYOR : null),
+//    RAILWAY_1(ModList.get().isLoaded("createcasing") ? AllBlocks.RAILWAY_CASING : null,
+//            ModList.get().isLoaded("createcasing") ? EncasedBlocks.RAILWAY_CHAIN_CONVEYOR : null),
+//    INDUSTRIAL_IRON_1(ModList.get().isLoaded("createcasing") ? AllBlocks.INDUSTRIAL_IRON_BLOCK : null,
+//            ModList.get().isLoaded("createcasing") ? EncasedBlocks.INDUSTRIAL_IRON_CHAIN_CONVEYOR : null),
+//    WEATHERED_IRON_1(ModList.get().isLoaded("createcasing") ? AllBlocks.WEATHERED_IRON_BLOCK : null,
+//            ModList.get().isLoaded("createcasing") ? EncasedBlocks.WEATHERED_IRON_CHAIN_CONVEYOR : null),
+//    REFINED_RADIANCE_1(ModList.get().isLoaded("createcasing") ? AllBlocks.REFINED_RADIANCE_CASING : null,
+//            ModList.get().isLoaded("createcasing") ? EncasedBlocks.REFINED_RADIANCE_CHAIN_CONVEYOR : null),
+//    SHADOW_STEEL_1(ModList.get().isLoaded("createcasing") ? AllBlocks.SHADOW_STEEL_CASING : null,
+//            ModList.get().isLoaded("createcasing") ? EncasedBlocks.SHADOW_STEEL_CHAIN_CONVEYOR : null),
+//    CREATIVE_1(ModList.get().isLoaded("createcasing") ? EncasedBlocks.CREATIVE_CASING : null,
+//            ModList.get().isLoaded("createcasing") ? EncasedBlocks.CREATIVE_CHAIN_CONVEYOR : null),
+
+BRASS_1(
+        ModList.get().isLoaded("createcasing")
+                ? CasingSets.BRASS.getCasingSupplier()
+                : null,
+        ModList.get().isLoaded("createcasing")
+                ? CasingSets.BRASS.getChainConveyorSupplier()
+                : null
+),
+
+    COPPER_1(
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.COPPER.getCasingSupplier()
+                    : null,
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.COPPER.getChainConveyorSupplier()
+                    : null
+    ),
+
+    RAILWAY_1(
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.RAILWAY.getCasingSupplier()
+                    : null,
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.RAILWAY.getChainConveyorSupplier()
+                    : null
+    ),
+
+    INDUSTRIAL_IRON_1(
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.INDUSTRIAL_IRON.getCasingSupplier()
+                    : null,
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.INDUSTRIAL_IRON.getChainConveyorSupplier()
+                    : null
+    ),
+
+    WEATHERED_IRON_1(
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.WEATHERED_IRON.getCasingSupplier()
+                    : null,
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.WEATHERED_IRON.getChainConveyorSupplier()
+                    : null
+    ),
+
+    REFINED_RADIANCE_1(
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.REFINED_RADIANCE.getCasingSupplier()
+                    : null,
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.REFINED_RADIANCE.getChainConveyorSupplier()
+                    : null
+    ),
+
+    SHADOW_STEEL_1(
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.SHADOW_STEEL.getCasingSupplier()
+                    : null,
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.SHADOW_STEEL.getChainConveyorSupplier()
+                    : null
+    ),
+
+    CREATIVE_1(
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.CREATIVE.getCasingSupplier()
+                    : null,
+            ModList.get().isLoaded("createcasing")
+                    ? CasingSets.CREATIVE.getChainConveyorSupplier()
+                    : null
+    ),
 
     // Andesite colored
     BLACK_ANDESITE(CECBlocks.BLACK_CASING, CCCCBlocks.BLACK_ANDESITE_CHAIN_CONVEYOR),
@@ -96,28 +170,33 @@ public enum CCCCEncasableBlocks {
 //    RGB_COPPER(CECBlocks.RGB_COPPER_CASING, CCCCBlocks.RGB_COPPER_CHAIN_CONVEYOR)
    ;
 
+    private final Supplier<? extends Block> casing;
+    private final Supplier<? extends Block> chainConveyor;
 
-    private final BlockEntry<? extends Block> casing;
-    private final BlockEntry<? extends Block> chainConveyor;
-
-    CCCCEncasableBlocks(BlockEntry<? extends Block> casing, BlockEntry<? extends Block> chainConveyor) {
+    CCCCEncasableBlocks(Supplier<? extends Block> casing,
+                        Supplier<? extends Block> chainConveyor) {
         this.casing = casing;
         this.chainConveyor = chainConveyor;
     }
 
-    // ---------------------------
-    // FINDERS
-    // ---------------------------
-    public static CCCCEncasableBlocks getBlockByCasing(BlockState casing) {
+    public static CCCCEncasableBlocks getBlockByCasing(BlockState casingState) {
         return Arrays.stream(values())
-                .filter(e -> e.casing != null && e.casing.has(casing))
+                .filter(e ->
+                        e.casing != null &&
+                                e.casing.get() != null &&
+                                e.casing.get().defaultBlockState().is(casingState.getBlock())
+                )
                 .findFirst()
                 .orElse(null);
     }
 
-    public static CCCCEncasableBlocks getBlockByCasing(Item casing) {
+    public static CCCCEncasableBlocks getBlockByCasing(Item casingItem) {
         return Arrays.stream(values())
-                .filter(e -> e.casing != null && e.casing.is(casing))
+                .filter(e ->
+                        e.casing != null &&
+                                e.casing.get() != null &&
+                                e.casing.get().asItem() == casingItem
+                )
                 .findFirst()
                 .orElse(null);
     }
@@ -130,26 +209,86 @@ public enum CCCCEncasableBlocks {
         return getBlockByCasing(casing) != null;
     }
 
-    // ---------------------------
-    // GETTERS
-    // ---------------------------
-    public BlockEntry<? extends Block> getCasing() {
+    public Supplier<? extends Block> getCasing() {
         return casing;
     }
 
-    public BlockEntry<? extends Block> getChainConveyor() {
+    public Supplier<? extends Block> getChainConveyor() {
         return chainConveyor;
     }
 
-    // ---------------------------
-    // CHECKERS
-    // ---------------------------
     public static boolean isChainConveyor(BlockState state) {
         return Arrays.stream(values())
-                .anyMatch(b -> b.getChainConveyor() != null && b.getChainConveyor().has(state));
+                .anyMatch(b ->
+                        b.getChainConveyor() != null &&
+                                b.getChainConveyor().get() != null &&
+                                b.getChainConveyor().get().defaultBlockState().is(state.getBlock())
+                );
     }
 
     public boolean isInSet(BlockState state) {
-        return (casing != null && casing.has(state)) || (chainConveyor != null && chainConveyor.has(state));
+        return (casing != null &&
+                casing.get() != null &&
+                casing.get().defaultBlockState().is(state.getBlock()))
+                ||
+                (chainConveyor != null &&
+                        chainConveyor.get() != null &&
+                        chainConveyor.get().defaultBlockState().is(state.getBlock()));
     }
 }
+//    private final BlockEntry<? extends Block> casing;
+//    private final BlockEntry<? extends Block> chainConveyor;
+//
+//    CCCCEncasableBlocks(BlockEntry<? extends Block> casing, BlockEntry<? extends Block> chainConveyor) {
+//        this.casing = casing;
+//        this.chainConveyor = chainConveyor;
+//    }
+//
+//    // ---------------------------
+//    // FINDERS
+//    // ---------------------------
+//    public static CCCCEncasableBlocks getBlockByCasing(BlockState casing) {
+//        return Arrays.stream(values())
+//                .filter(e -> e.casing != null && e.casing.has(casing))
+//                .findFirst()
+//                .orElse(null);
+//    }
+//
+//    public static CCCCEncasableBlocks getBlockByCasing(Item casing) {
+//        return Arrays.stream(values())
+//                .filter(e -> e.casing != null && e.casing.is(casing))
+//                .findFirst()
+//                .orElse(null);
+//    }
+//
+//    public static boolean hasBlocksForCasing(BlockState casing) {
+//        return getBlockByCasing(casing) != null;
+//    }
+//
+//    public static boolean hasBlocksForCasing(Item casing) {
+//        return getBlockByCasing(casing) != null;
+//    }
+//
+//    // ---------------------------
+//    // GETTERS
+//    // ---------------------------
+//    public BlockEntry<? extends Block> getCasing() {
+//        return casing;
+//    }
+//
+//    public BlockEntry<? extends Block> getChainConveyor() {
+//        return chainConveyor;
+//    }
+//
+//    // ---------------------------
+//    // CHECKERS
+//    // ---------------------------
+//    public static boolean isChainConveyor(BlockState state) {
+//        return Arrays.stream(values())
+//                .anyMatch(b -> b.getChainConveyor() != null && b.getChainConveyor().has(state));
+//    }
+//
+//    public boolean isInSet(BlockState state) {
+//        return (casing != null && casing.has(state)) || (chainConveyor != null && chainConveyor.has(state));
+//    }
+//}
